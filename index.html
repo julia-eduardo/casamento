@@ -3,30 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Lista de Presentes 💍</title>
+
+  <!-- Mobile first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preview WhatsApp -->
+  <meta property="og:title" content="Casamento do Eduardo 💍">
+  <meta property="og:description" content="Presentes fictícios, amor real ❤️">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>💍 Casamento Eduardo e Julia</h1>
-<p class="sub">
-Presentes fictícios, amor real ❤️
-</p>
+<header>
+  <h1>💍 Casamento Eduardo e Julia</h1>
+  <p>Presentes fictícios, amor real ❤️</p>
+</header>
 
-<div id="lista" class="lista">
-  <!-- JS preenche aqui -->
-</div>
+<section class="rsvp">
+  <h2>📝 Confirme sua presença</h2>
+  <p>Digite o nome de quem irá ao casamento:</p>
+
+  <input id="nome" placeholder="Ex: João e Maria">
+  <button onclick="confirmarPresenca()">Confirmar Presença 💍</button>
+
+  <p id="rsvp-msg" class="hidden">💖 Presença confirmada!</p>
+</section>
+
+
+<main>
+  <section id="lista" class="lista">
+    <!-- Cards gerados via JS -->
+  </section>
+</main>
 
 <!-- Modal PIX -->
-<div id="modal" class="modal">
+<div id="modal" class="modal hidden">
   <div class="modal-content">
-    <span class="close" onclick="fecharPix()">×</span>
+    <button class="close" onclick="fecharPix()">✕</button>
     <h2 id="modal-titulo"></h2>
-    <img id="pix-img">
-    <p>Use o QR Code ou copie o PIX:</p>
+    <img id="pix-img" alt="QR Code PIX">
+    <p>Escaneie o QR Code ou copie o PIX:</p>
     <code id="pix-code"></code>
+    <button onclick="copiarPix()">📋 Copiar PIX</button>
+    <span id="toast" class="toast hidden">PIX copiado!</span>
   </div>
 </div>
 
-<script src="script.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

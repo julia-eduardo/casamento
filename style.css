@@ -1,23 +1,42 @@
+:root {
+  --cor-principal: #ff7a7a;
+  --cor-fundo: #fff7f0;
+  --cor-card: #ffffff;
+  --sombra: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #fff7f0;
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--cor-fundo);
   text-align: center;
 }
 
+header {
+  padding: 20px;
+}
+
 .lista {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin: 30px;
+  padding: 20px;
 }
 
 .presente {
-  background: white;
-  width: 250px;
+  background: var(--cor-card);
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s;
+}
+
+.presente:hover {
+  transform: translateY(-5px);
 }
 
 .presente span {
@@ -27,29 +46,83 @@ body {
 }
 
 button {
-  background: #ff7a7a;
+  background: var(--cor-principal);
   border: none;
-  padding: 10px;
-  border-radius: 10px;
   color: white;
+  padding: 10px;
+  border-radius: 12px;
   cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
 }
 
 button:hover {
-  background: #ff5252;
+  opacity: 0.9;
 }
 
+/* Modal */
+
 .modal {
-  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
 }
 
 .modal-content {
   background: white;
-  width: 300px;
-  margin: 10% auto;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 320px;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: black;
+  font-size: 1.2rem;
+}
+
+/* Toast */
+
+.toast {
+  display: block;
+  margin-top: 10px;
+  color: green;
+}
+
+.rsvp {
+  background: white;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+}
+
+.rsvp input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.rsvp button {
+  max-width: 300px;
+  margin: auto;
 }
