@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Presentes 💍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>💍 Casamento do Eduardo</h1>
+<p class="sub">
+Ajude a construir nosso futuro… ou pelo menos a lua de mel 😄
+</p>
+
+<div class="lista">
+
+  <div class="presente">
+    <h2>🍹 Caipirinha na Lua de Mel</h2>
+    <p>Uma dose de felicidade tropical.</p>
+    <span>R$ 50</span>
+    <button onclick="abrirPix('assets/pix-lua-mel.png')">
+      Presentear 🍹
+    </button>
+  </div>
+
+  <div class="presente">
+    <h2>🍕 Primeira Pizza de Casados</h2>
+    <p>Porque ninguém cozinha no primeiro dia.</p>
+    <span>R$ 80</span>
+    <button onclick="abrirPix('assets/pix-jantar.png')">
+      Presentear 🍕
+    </button>
+  </div>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharPix()">×</span>
+    <h2>📲 Escaneie o QR Code</h2>
+    <img id="pix-img" src="">
+    <p>Ou copie o PIX abaixo:</p>
+    <code id="pix-code">SUA_CHAVE_PIX_AQUI</code>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
