@@ -22,7 +22,8 @@ export function confirmarPresenca() {
         mode: 'no-cors',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `entry.447299125=${encodeURIComponent(nome)}` +
-            `&entry.2136970471=${encodeURIComponent(presenca)}`
+            `&entry.2136970471=${encodeURIComponent(presenca)}` +
+            `&submit=Submit`
       });
 
   if (presenca === 'Sim') {
