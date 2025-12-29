@@ -123,19 +123,51 @@ button:hover {
   padding: 20px;
   border-radius: 16px;
   box-shadow: var(--sombra);
+  text-align: center; /* 🔹 importante */
 }
 
+/* Input do nome */
 .rsvp input {
   width: 90%;
+  max-width: 500px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px auto;
   border-radius: 10px;
   border: 1px solid #ccc;
+  display: block;
 }
 
+/* Opções Sim / Não */
+.rsvp-opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px auto 20px;
+  align-items: center;
+  white-space: nowrap;   /* 🔹 impede quebra de linha */
+}
+
+/* Cada opção */
+.rsvp-opcoes label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Botão */
 .rsvp button {
   max-width: 300px;
-  margin: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .rsvp-opcoes {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .evento {

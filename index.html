@@ -50,12 +50,25 @@
 
 <section class="rsvp">
   <h2>📝 Confirme sua presença</h2>
-  <p>Digite o nome de quem irá ao casamento:</p>
+  <p>Digite o nome e informe se irá ao casamento:</p>
 
   <input id="nome" placeholder="Ex: João e Maria">
-  <button onclick="confirmarPresenca()">Confirmar Presença 💍</button>
 
-  <p id="rsvp-msg" class="hidden">💖 Presença confirmada!</p>
+  <div class="rsvp-opcoes">
+    <label>
+      <input type="radio" name="presenca" value="Sim">
+      Vou comparecer 🎉
+    </label>
+
+    <label>
+      <input type="radio" name="presenca" value="Não">
+      Não poderei ir 😢
+    </label>
+  </div>
+
+  <button onclick="confirmarPresenca()">Enviar resposta 💍</button>
+
+  <p id="rsvp-msg" class="hidden"></p>
 </section>
 
 <header>
