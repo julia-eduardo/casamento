@@ -94,7 +94,7 @@
     </label>
   </div>
 
-  <button onclick="confirmarPresenca()">Enviar resposta 💍</button>
+  <button id="rsvp-enviar">Enviar resposta 💍</button>
 
   <p id="rsvp-msg" class="hidden"></p>
 </section>
@@ -113,12 +113,12 @@
 <!-- Modal PIX -->
 <div id="modal" class="modal hidden">
   <div class="modal-content">
-    <button class="close" onclick="fecharPix()">✕</button>
+    <button class="close" id="modal-close">✕</button>
     <h2 id="modal-titulo"></h2>
     <img id="pix-img" alt="QR Code PIX">
     <p>Escaneie o QR Code ou copie o PIX:</p>
     <code id="pix-code"></code>
-    <button onclick="copiarPix()">📋 Copiar PIX</button>
+    <button id="modal-copy">📋 Copiar PIX</button>
     <span id="toast" class="toast hidden">PIX copiado!</span>
   </div>
 </div>

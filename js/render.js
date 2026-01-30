@@ -20,7 +20,8 @@ export async function carregarPresentes() {
         <button>Presentear</button>
       `;
 
-        card.querySelector('button').onclick = () => abrirPix(p);
+        card.querySelector('button').addEventListener(
+            'click', () => abrirPix(p));
         lista.appendChild(card);
       });
 }

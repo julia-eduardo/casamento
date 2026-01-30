@@ -22,8 +22,24 @@ export function copiarPix() {
   setTimeout(() => toast.classList.add('hidden'), 2000);
 }
 
-// Exponha funções usadas por handlers inline (onclick) ao escopo global
-// Isso é necessário porque os módulos ES não definem automaticamente
-// variáveis no objeto `window`.
-window.fecharPix = fecharPix;
-window.copiarPix = copiarPix;
+// Registra event listeners para os controles da modal quando o DOM estiver
+// pronto Também adiciona melhorias: fechar ao clicar fora e ao pressionar
+// Escape.
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal');
+  const closeBtn = document.getElementById('modal-close');
+  const copyBtn = document.getElementById('modal-copy');
+
+  if (closeBtn) closeBtn.addEventListener('click', fecharPix);
+  if (copyBtn) copyBtn.addEventListener('click', copiarPix);
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) fecharPix();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fecharPix();
+  });
+});
