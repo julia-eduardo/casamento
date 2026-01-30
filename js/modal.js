@@ -21,3 +21,9 @@ export function copiarPix() {
 
   setTimeout(() => toast.classList.add('hidden'), 2000);
 }
+
+// Exponha funções usadas por handlers inline (onclick) ao escopo global
+// Isso é necessário porque os módulos ES não definem automaticamente
+// variáveis no objeto `window`.
+window.fecharPix = fecharPix;
+window.copiarPix = copiarPix;

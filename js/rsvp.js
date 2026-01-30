@@ -26,7 +26,7 @@ export function confirmarPresenca() {
             `&submit=Submit`
       });
 
-  if (presenca === 'Sim') {
+  if (presenca.includes('Sim')) {
     msg.innerText = `🎉 Que alegria, ${nome}! Te esperamos 💍`;
   } else {
     msg.innerText = `💖 Obrigado por avisar, ${nome}!`;
