@@ -1,0 +1,35 @@
+[
+  {
+    "id": "lua_mel",
+    "nome": "Caipirinha na Lua de Mel",
+    "emoji": "🍹",
+    "descricao": "Uma dose de felicidade tropical.",
+    "valor": 50,
+    "ordem": 1,
+    "ativo": true,
+    "qrCode": "/assets/pix/pix-lua-mel.png",
+    "pixCopiaCola": "0002012636...ABCD"
+  },
+  {
+    "id": "pizza",
+    "nome": "Primeira Pizza de Casados",
+    "emoji": "🍕",
+    "descricao": "Porque ninguém cozinha no primeiro dia.",
+    "valor": 80,
+    "ordem": 2,
+    "ativo": true,
+    "qrCode": "/assets/pix/pix-jantar.png",
+    "pixCopiaCola": "0002012636...EFGH"
+  },
+  {
+    "id": "surpresa",
+    "nome": "Presente Surpresa",
+    "emoji": "🎁",
+    "descricao": "Deixe o destino decidir.",
+    "valor": 120,
+    "ordem": 3,
+    "ativo": true,
+    "qrCode": "/assets/pix/surpresa.png",
+    "pixCopiaCola": "0002012636...IJKL"
+  }
+]

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6EA8FE;
+  --rose: #F7A7C7;
+  --sun: #FFD27D;
+  --mint: #AEE8C7;
+  --sand: #FEF7EE;
+  --text: #1F2A44;
+  --muted: #8C98A6;
+}
+
+body {
+  font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--text);
+  background: var(--sand);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.button {
+  @apply px-6 py-3 rounded-2xl font-semibold text-white inline-block;
+  background: var(--primary);
+  box-shadow: 0 8px 24px rgba(11,30,60,0.08);
+}
+
+.dark {
+  --sand: #0f1724;
+  --text: #e6edf6;
+}

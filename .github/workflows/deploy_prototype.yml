@@ -1,0 +1,26 @@
+name: Deploy Prototype to gh-pages
+
+on:
+  push:
+    branches: [ feature/design-prototype ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./prototype
+      - name: Build
+        run: npm run build
+        working-directory: ./prototype
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./prototype/dist
