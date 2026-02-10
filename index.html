@@ -1,128 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Lista de Presentes 💍</title>
-
-  <!-- Mobile first -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Preview WhatsApp -->
-  <meta property="og:title" content="Casamento Eduardo e Julia 💍">
-  <meta property="og:description" content="Presentes fictícios, amor real ❤️">
-  <meta property="og:type" content="website">
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Casamento — Protótipo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Imagem topo -->
-<div class="hero">
-  <img src="./assets/header/topo.png" alt="Imagem do casamento">
-</div>
-
-<section class="evento">
-  <h2>📅 Nosso grande dia</h2>
-
-  <p class="data">
-    20 de junho de 2026
-  </p>
-
-  <div class="contador">
-    <div>
-      <span id="dias">0</span>
-      <small>Dias</small>
-    </div>
-    <div>
-      <span id="horas">0</span>
-      <small>Horas</small>
-    </div>
-    <div>
-      <span id="minutos">0</span>
-      <small>Minutos</small>
-    </div>
-    <div>
-      <span id="segundos">0</span>
-      <small>Segundos</small>
-    </div>
-  </div>
-</section>
-
-<section class="localizacao">
-  <h2>📍 Local do Evento</h2>
-
-  <p class="endereco">
-    Connect Vila Sônia, Salão de Festas<br>
-    Av. Prof. Francisco Morato, 3265 – Vila Sônia<br>
-    São Paulo – SP
-  </p>
-  
-  <a
-    href="https://maps.app.goo.gl/AYshEyh6KEVTeiUK9"
-    target="_blank"
-    rel="noopener"
-    class="mapa-link"
-  >
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1828.1952407765557!2d-46.7289886!3d-23.5903249!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5790bcae6075%3A0x3381ae18dd4bf0b1!2sConnect%20Vila%20S%C3%B4nia!5e0!3m2!1spt-BR!2sbr!4v1767049015225!5m2!1spt-BR!2sbr"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      allowfullscreen
-    ></iframe>
-
-    <span class="mapa-overlay">
-      🗺️ Clique para abrir no Google Maps
-    </span>
-  </a>
-</section>
-
-<section class="rsvp">
-  <h2>📝 Confirme sua presença</h2>
-  <p>Digite o nome e informe se irá ao casamento:</p>
-
-  <input id="nome" placeholder="Ex: João e Maria">
-
-  <div class="rsvp-opcoes">
-    <label>
-      <input type="radio" name="presenca" value="Sim 🎊">
-      Vou comparecer 🎉
-    </label>
-
-    <label>
-      <input type="radio" name="presenca" value="Não 🙁">
-      Não poderei ir 😢
-    </label>
-  </div>
-
-  <button id="rsvp-enviar">Enviar resposta 💍</button>
-
-  <p id="rsvp-msg" class="hidden"></p>
-</section>
-
-<header>
-  <h1>🎁 Lista de presentes</h1>
-  <p>Presentes fictícios, amor real ❤️</p>
-</header>
-
-<main>
-  <section id="lista" class="lista">
-    <!-- Cards gerados via JS -->
-  </section>
-</main>
-
-<!-- Modal PIX -->
-<div id="modal" class="modal hidden">
-  <div class="modal-content">
-    <button class="close" id="modal-close">✕</button>
-    <h2 id="modal-titulo"></h2>
-    <img id="pix-img" alt="QR Code PIX">
-    <p>Escaneie o QR Code ou copie o PIX:</p>
-    <code id="pix-code"></code>
-    <button id="modal-copy">📋 Copiar PIX</button>
-    <span id="toast" class="toast hidden">PIX copiado!</span>
-  </div>
-</div>
-
-<script type="module" src="./js/main.js"></script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
