@@ -1,4 +1,4 @@
-const DATA_EVENTO = new Date('2026-05-15T16:00:00');
+const DATA_EVENTO = new Date('2026-06-20T16:00:00');
 // ⚠️ ajuste data e horário aqui
 
 function atualizarContador() {
