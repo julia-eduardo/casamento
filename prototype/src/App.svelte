@@ -5,7 +5,6 @@
   import Home from './routes/Home.svelte';
   import Presentes from './routes/Presentes.svelte';
   import RSVP from './routes/RSVP.svelte';
-  import Galeria from './routes/Galeria.svelte';
   import Local from './routes/Local.svelte';
   import Sobre from './routes/Sobre.svelte';
 
@@ -22,15 +21,13 @@
 </script>
 
 <Header />
-<main class="container mx-auto p-6">
+<main class="container mx-auto p-6" style="padding-top: var(--header-height);">
   {#if route === 'home'}
     <Home />
   {:else if route === 'presentes'}
     <Presentes />
   {:else if route === 'rsvp'}
     <RSVP />
-  {:else if route === 'galeria'}
-    <Galeria />
   {:else if route === 'local'}
     <Local />
   {:else if route === 'sobre'}

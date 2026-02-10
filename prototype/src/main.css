@@ -3,34 +3,355 @@
 @tailwind utilities;
 
 :root {
-  --primary: #6EA8FE;
-  --rose: #F7A7C7;
-  --sun: #FFD27D;
-  --mint: #AEE8C7;
-  --sand: #FEF7EE;
-  --text: #1F2A44;
+  /* Paleta personalizada (nomeadas para mix apropriado) */
+  --peach: #EE9452; /* Perfect Peach */
+  --pink: #D39BAD; /* Softest Pink */
+  --sun: #E0BA51; /* Sunflower */
+  --mint: #9FAF8A; /* Green Fog */
+  --sand: #FEF7EE; /* background (bege claro) */
+  --velvet: #777E88; /* Velvet Blue */
   --muted: #8C98A6;
+
+  /* accent colors (solids) */
+  --accent-a: var(--sun);
+  --accent-b: var(--pink);
+  --accent-c: var(--peach);
+  /* extras para o visual editorial pastel */
+  --overlay: rgba(255, 247, 240, 0.7);
+  /* hero overlay now a single semi-opaque color (no gradients) */
+  --hero-overlay: rgba(254,243,238,0.85);
+  --card-shadow: 0 12px 40px rgba(11,30,60,0.07);
+
+  /* header sizing (usado para posicionamento fixo) */
+  --header-height: 64px;
+
+  /* semantic color roles (níveis suaves) */
+  --color-title: var(--velvet);      /* Velvet Blue para títulos */
+  --color-cta: var(--peach);         /* Perfect Peach para CTA primário */
+  --color-cta-2: var(--pink);        /* Softest Pink para CTA secundário */
+  --color-section: var(--mint);      /* Green Fog para blocos de fundo */
+  --color-accent: var(--sun);        /* Sunflower para destaques pontuais */
+  --color-section-alpha: rgba(255, 251, 245, 0.92); /* overlay neutro bege/branco */
 }
 
 body {
   font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  color: var(--text);
+  color: var(--color-title);
   background: var(--sand);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 { 
+  font-size: clamp(2.5rem, 6vw, 3.5rem); 
+}
+h2 { 
+  font-size: clamp(2rem, 5vw, 2.8rem); 
+}
+h3 { 
+  font-size: clamp(1.5rem, 4vw, 2rem); 
+}
+
+/* Estilo especial para nomes/títulos principais (estilo manuscrito) */
+.handwritten {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+.script-light {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Elementos de texto auxiliares */
+.text-muted {
+  color: var(--muted);
+}
+
+/* Divisor decorativo */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--color-accent);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(224, 186, 81, 0.3);
+}
+
+.divider::before {
+  margin-right: 1rem;
+}
+
+.divider::after {
+  margin-left: 1rem;
+}
+
+/* Hero editorial */
+.hero {
+  position: relative;
+  /* expandir além do container para ficar edge-to-edge */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  height: 45vh;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    height: 55vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 65vh;
+  }
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent; /* Removida sobreposição clara para preservar a cor da imagem */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+/* Melhora da legibilidade do texto sobre a imagem sem alterar a foto */
+.hero .hero-inner h1,
+.hero .hero-inner .sub {
+  text-shadow: 0 6px 18px rgba(31, 42, 68, 0.35);
+}
+
+.hero .hero-inner {
+  max-width: 1100px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3.25rem;
+  line-height: 1.02;
+  color: var(--text);
+  margin: 0 0 8px 0;
+}
+
+.hero p.sub {
+  color: var(--muted);
+  margin: 0 0 16px 0;
+  font-size: 1.05rem;
 }
 
 .button {
   @apply px-6 py-3 rounded-2xl font-semibold text-white inline-block;
-  background: var(--primary);
-  box-shadow: 0 8px 24px rgba(11,30,60,0.08);
+  background-color: var(--color-cta);
+  box-shadow: var(--card-shadow);
+  color: white;
+  transition: transform .18s ease, filter .18s ease;
+  border: 2px solid rgba(255,255,255,0.3);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .button {
+    font-size: 1rem;
+  }
+}
+
+.button:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.05); }
+
+.button.secondary {
+  @apply px-6 py-3 rounded-2xl font-semibold text-white inline-block;
+  background-color: var(--color-cta-2);
+  box-shadow: var(--card-shadow);
+  color: white;
+  transition: transform .18s ease, filter .18s ease;
+  border: 2px solid rgba(255,255,255,0.3);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .button.secondary {
+    font-size: 1rem;
+  }
+}
+
+.button.secondary:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.05); }
+
+.button.ghost {
+  @apply px-4 py-2 rounded-lg font-semibold inline-block border;
+  border-color: var(--velvet);
+  color: var(--velvet);
+  background: transparent;
+}
+
+.logo {
+  background-color: var(--color-accent); /* Sunflower solid color */
+}
+
+.logo-text {
+  font-family: 'Dancing Script', cursive;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 2rem;
+}
+
+
+/* Header nav colors to mix palette and ensure variety */
+header nav a { color: var(--color-title); text-decoration-color: transparent; }
+header nav a:hover { color: var(--color-cta); text-decoration-color: var(--color-cta); }
+
+/* Card overlay */
+.card-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Seção de evento (data, local, botões) */
+.evento {
+  background: white;
+  margin: 20px 0;
+  padding: 28px 16px;
+  border-radius: 14px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+.evento .sub { color: var(--muted); }
+
+/* Seção convite com destaque e espaçamento maior */
+.convite {
+  margin: 0;
+  padding: 16px;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .convite {
+    padding: 24px 16px;
+  }
+}
+
+.convite h2 {
+  font-size: clamp(2rem, 8vw, 3rem);
+  margin-bottom: 12px;
+  line-height: 1.08;
+  font-weight: 700;
+  color: var(--color-cta-2);
+}
+.convite .sub { 
+  color: var(--color-title); 
+  font-weight: 600; 
+  font-size: 1.15rem;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+/* Seção de detalhes (endereço + CTAs) */
+.evento-detalhes {
+  background: linear-gradient(to bottom, #FFFBF5, #FFFFFF);
+  color: var(--color-title);
+  margin: 12px 16px 24px 16px;
+  padding: 20px 16px;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  border: 3px solid rgba(224,186,81,0.2);
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .evento-detalhes {
+    margin: 12px 20px 36px 20px;
+    padding: 28px 20px;
+  }
+}
+.evento-detalhes .text-muted { color: rgba(119,126,136,0.85); font-size: 1.05rem; }
+
+/* Elementos decorativos */
+.evento-detalhes::before {
+  content: '🍀';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 1.5rem;
+}
+
+.evento-detalhes::after {
+  content: '🍀';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .evento-detalhes::before,
+  .evento-detalhes::after {
+    top: -12px;
+    font-size: 1.8rem;
+  }
+  
+  .evento-detalhes::before {
+    left: 20px;
+  }
+  
+  .evento-detalhes::after {
+    right: 20px;
+  }
+}
+
+
+.card-image img { width:100%; height:100%; object-fit:cover; display:block }
+
+.card-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 12px;
+  /* Overlay claro e neutro que harmoniza com cores quentes */
+  background: linear-gradient(to top, rgba(255, 251, 245, 0.95), rgba(255, 251, 245, 0.75));
+  backdrop-filter: blur(4px);
+}
+
+.card-title { 
+  font-weight: 700; 
+  color: var(--color-title);
+  font-size: 1.1rem;
+}
+.card-price { 
+  color: var(--color-cta); 
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .dark {
   --sand: #0f1724;
   --text: #e6edf6;
 }
+

@@ -3,11 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#6EA8FE',
-        rose: '#F7A7C7',
-        sun: '#FFD27D',
-        mint: '#AEE8C7',
-        sand: '#FEF7EE'
+        peach: '#EE9452',   // Perfect Peach
+        pink: '#D39BAD',    // Softest Pink
+        sun: '#E0BA51',     // Sunflower
+        mint: '#9FAF8A',    // Green Fog
+        velvet: '#777E88',  // Velvet Blue
+        sand: '#FEF7EE'     // background (light)
       }
     }
   },
