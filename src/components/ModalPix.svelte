@@ -45,7 +45,11 @@
 
 {#if open}
 
-  <div class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4" on:click|self={fechar}>
+  <div 
+    class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4" 
+    on:click|self={fechar}
+    role="presentation"
+  >
     <div role="dialog" aria-modal="true" class="bg-white rounded-3xl p-6 sm:p-8 w-full max-w-md shadow-2xl border-4 border-pink-100" style="background: linear-gradient(to bottom, #FEF7EE, #FFFFFF); max-height: 90vh; overflow-y: auto;">
       <button 
         class="float-right text-2xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-pink-100 transition-colors" 
