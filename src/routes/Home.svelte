@@ -5,8 +5,8 @@
 <!-- Hero editorial full-bleed -->
 <section class="hero" style="margin-top: calc(-1 * var(--header-height));">
   <picture>
-    <source srcset="/assets/header/topo.png" type="image/png" />
-    <img src="/assets/header/topo.png" alt="Hero" />
+    <source srcset="assets/header/topo.png" type="image/png" />
+    <img src="assets/header/topo.png" alt="Hero" />
   </picture>
   <div class="overlay">
     <div class="hero-inner">

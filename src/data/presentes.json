@@ -7,7 +7,7 @@
     "valor": 50,
     "ordem": 1,
     "ativo": true,
-    "qrCode": "/assets/pix/pix-lua-mel.png",
+    "qrCode": "assets/pix/pix-lua-mel.png",
     "pixCopiaCola": "0002012636...ABCD"
   },
   {
@@ -18,7 +18,7 @@
     "valor": 80,
     "ordem": 2,
     "ativo": true,
-    "qrCode": "/assets/pix/pix-jantar.png",
+    "qrCode": "assets/pix/pix-jantar.png",
     "pixCopiaCola": "0002012636...EFGH"
   },
   {
@@ -29,7 +29,7 @@
     "valor": 120,
     "ordem": 3,
     "ativo": true,
-    "qrCode": "/assets/pix/surpresa.png",
+    "qrCode": "assets/pix/surpresa.png",
     "pixCopiaCola": "0002012636...IJKL"
   }
 ]
