@@ -6,7 +6,6 @@
   import Presentes from './routes/Presentes.svelte';
   import RSVP from './routes/RSVP.svelte';
   import Local from './routes/Local.svelte';
-  import Sobre from './routes/Sobre.svelte';
 
   let route = 'home';
 
@@ -30,8 +29,6 @@
     <RSVP />
   {:else if route === 'local'}
     <Local />
-  {:else if route === 'sobre'}
-    <Sobre />
   {/if}
 </main>
 <Footer />

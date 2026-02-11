@@ -1,5 +1,6 @@
 <script>
   import Counter from '../components/Counter.svelte'
+  import Sobre from './Sobre.svelte'
 </script>
 
 <!-- Hero editorial full-bleed -->
@@ -29,14 +30,4 @@
   </div>
 </section>
 
-<!-- Detalhes: endereço e CTAs abaixo do convite -->
-<section class="evento-detalhes py-6 sm:py-8">
-  <div class="container mx-auto px-4 text-center max-w-3xl">
-    <p class="mb-6 text-muted text-sm sm:text-base">Av. Prof. Francisco Morato, 3265 – Vila Sônia, São Paulo – SP</p>
-
-    <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-      <a href="#presentes" class="button w-full sm:w-auto">Ver Presentes</a>
-      <a href="#rsvp" class="button secondary w-full sm:w-auto">Confirmar presença</a>
-    </div>
-  </div>
-</section>
+<Sobre />

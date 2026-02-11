@@ -22,7 +22,7 @@
       <a href="#presentes" class="hover:underline">Presentes</a>
       <a href="#rsvp" class="hover:underline">RSVP</a>
       <a href="#local" class="hover:underline">Local</a>
-      <a href="#sobre" class="hover:underline">Nossa História</a>
+      <a href="https://drive.google.com/drive/folders/1CdunwXVcqtTXsbA49L0pgt2mpbv31-JD?usp=drive_link" class="hover:underline" target="_blank" rel="noreferrer">Fotos do evento</a>
     </nav>
 
     <!-- Botão CTA Desktop -->
@@ -50,7 +50,7 @@
         <a href="#presentes" class="py-3 px-4 rounded-lg hover:bg-pink-50 transition-colors" on:click={closeMenu}>🎁 Presentes</a>
         <a href="#rsvp" class="py-3 px-4 rounded-lg hover:bg-pink-50 transition-colors" on:click={closeMenu}>📝 Confirmar Presença</a>
         <a href="#local" class="py-3 px-4 rounded-lg hover:bg-pink-50 transition-colors" on:click={closeMenu}>📍 Local</a>
-        <a href="#sobre" class="py-3 px-4 rounded-lg hover:bg-pink-50 transition-colors" on:click={closeMenu}>💕 Nossa História</a>
+        <a href="https://drive.google.com/drive/folders/1CdunwXVcqtTXsbA49L0pgt2mpbv31-JD?usp=drive_link" class="py-3 px-4 rounded-lg hover:bg-pink-50 transition-colors" target="_blank" rel="noreferrer">📸 Fotos do evento</a>
       </nav>
     </div>
   {/if}
