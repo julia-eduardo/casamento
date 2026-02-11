@@ -6,6 +6,7 @@
   import Presentes from './routes/Presentes.svelte';
   import RSVP from './routes/RSVP.svelte';
   import Local from './routes/Local.svelte';
+  import Fotos from './routes/Fotos.svelte';
 
   let route = 'home';
 
@@ -29,6 +30,8 @@
     <RSVP />
   {:else if route === 'local'}
     <Local />
+  {:else if route === 'fotos'}
+    <Fotos />
   {/if}
 </main>
 <Footer />
