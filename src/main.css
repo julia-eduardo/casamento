@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'FF Providence Sans';
+  src: url('./assets/fonts/providence-sansbold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Paleta personalizada (nomeadas para mix apropriado) */
   --peach: #EE9452; /* Perfect Peach */
@@ -43,7 +51,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Beth Ellen', cursive;
+  font-family: 'FF Providence Sans', cursive;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -60,12 +68,12 @@ h3 {
 
 /* Estilo especial para nomes/títulos principais (estilo manuscrito) */
 .handwritten {
-  font-family: 'Beth Ellen', cursive;
+  font-family: 'FF Providence Sans', cursive;
   font-weight: 700;
 }
 
 .script-light {
-  font-family: 'Beth Ellen', cursive;
+  font-family: 'FF Providence Sans', cursive;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -216,7 +224,7 @@ h3 {
 }
 
 .logo-text {
-  font-family: 'Beth Ellen', cursive;
+  font-family: 'FF Providence Sans', cursive;
   color: var(--color-accent);
   font-weight: 700;
   letter-spacing: 0.02em;

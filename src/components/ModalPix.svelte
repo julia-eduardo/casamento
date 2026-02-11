@@ -57,7 +57,7 @@
         bind:this={closeBtn}
         style="color: var(--color-cta-2);"
       >✕</button>
-      <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 pr-8" style="color: var(--color-cta-2); font-family: 'Beth Ellen', cursive;">{titulo}</h3>
+      <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 pr-8" style="color: var(--color-cta-2); font-family: 'FF Providence Sans', cursive;">{titulo}</h3>
       <div class="bg-white p-2 sm:p-3 rounded-xl shadow-md border-2 border-pink-50">
         <img src={qr} alt="QR Code" class="w-full rounded-lg" />
       </div>
